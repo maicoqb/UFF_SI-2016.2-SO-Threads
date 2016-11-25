@@ -13,6 +13,8 @@ Descrição do Trabalho
    
    Tanto pthread_self() quanto gettid() retornam o ID da thread. Altere o programa [...] para imprimir a ID da thread usando ambas funções. Elas retornam o mesmo valor? Se não, pesquise qual a diferença entre elas.
    
+   > **R:** A diferença entre os dois retornos é que o pthread_self() retorna o id da thread no escopo do processo pai. E o gettid() retorna o id da thread no escopo do SO. Ou seja, duas threads nunca terão o mesmo gettid(), pois quem determina é o SO, porém duas threads de processos diferentes podem possuir o mesmo pthread_self();
+   
    **NÃO USE VARIÁVEIS GLOBAIS!!!**
    
 2. Exercício 2 - Sushi Bar Problem
